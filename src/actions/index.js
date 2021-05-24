@@ -1,15 +1,16 @@
+import {INCREMENT, DECREMENT} from './actionTypes'
 
 // By default, increment action by 1 unit
 export const increment = (amount=1) => {
     return {
-        type: "INCREMENT",
+        type: INCREMENT,
         payload: amount,
     }
 }
 
 export const decrement = () => {
     return {
-        type: "DECREMENT"
+        type: DECREMENT,
     }
 }
 
