@@ -4,7 +4,7 @@ import {increment, decrement, signIn, signOut} from './actions';  // no need to 
 
 function App() {
   const counter = useSelector(state => state.counter)
-  const isLogged = useSelector(state => state.isLogged)
+  const isLoggedIn = useSelector(state => state.isLoggedIn)
   const dispatch = useDispatch();
 
   return (
@@ -15,9 +15,9 @@ function App() {
       <button onClick={() => dispatch(decrement())}>-</button>
       <button onClick={() => dispatch(increment(5))}>+5</button>
 
-      <p>Logged In? {isLogged ? 'yes' : 'no'}</p>
-      <button onClick={() => dispatch(signIn())} disabled={isLogged}>Sign In</button>
-      <button onClick={() => dispatch(signOut())} disabled={!isLogged}>Sign Out</button>
+      <p>Logged In? {isLoggedIn ? 'yes' : 'no'}</p>
+      <button onClick={() => dispatch(signIn())} disabled={isLoggedIn}>Sign In</button>
+      <button onClick={() => dispatch(signOut())} disabled={!isLoggedIn}>Sign Out</button>
     </div>
   );
 }
