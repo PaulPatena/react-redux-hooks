@@ -1,4 +1,4 @@
-import {INCREMENT, DECREMENT} from './actionTypes'
+import {INCREMENT, DECREMENT, SIGN_IN, SIGN_OUT} from './actionTypes'
 
 // By default, increment action by 1 unit
 export const increment = (amount=1) => {
@@ -14,5 +14,6 @@ export const decrement = () => {
     }
 }
 
-
+export const signIn = () => ({type: SIGN_IN})
+export const signOut = () => ({type: SIGN_OUT})
  
