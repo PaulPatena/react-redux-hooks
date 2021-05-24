@@ -9,12 +9,11 @@ function App() {
   const dispatch = useDispatch();
 
   return (
-    <div>
+    <div className="mainArea">
       <h2>Using redux-hooks!</h2>
       <p>counter: {counter}</p>
       <button onClick={() => dispatch(increment())}>+</button>
       <button onClick={() => dispatch(decrement())}>-</button>
-      <br></br>
       <button onClick={() => dispatch(increment(5))}>+5</button>
 
       <p>Logged Info: {isLogged ? 'yes' : 'no'}</p>
